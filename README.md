@@ -1,31 +1,24 @@
-# Policy Community Website
+# รู้จักพรรค — บุคลากรและนโยบาย
 
-An independent policy discussion website, built for GitHub Pages with an optional Supabase backend.
-
-This project is not affiliated with any political party. Demo content is illustrative.
+เว็บไซต์รวบรวมข้อมูลสาธารณะเกี่ยวกับบุคลากรและแนวนโยบาย พร้อมลิงก์ไปยังแหล่งข้อมูลต้นทาง เว็บไซต์นี้เป็นโปรเจกต์อิสระ ไม่ใช่เว็บไซต์ทางการของพรรคการเมืองใด
 
 ## Features
-- Search and filter policy cards
-- Member sign-up/login and profiles via Supabase Auth
-- Comments that require moderation before publication
-- Admin tools for policy CRUD and comment moderation
-- Responsive design
+- Search people by name and role
+- Browse and filter policy summaries
+- Open source links for further verification
+- Responsive layout for mobile and desktop
+- No login, account, comments, or database required
 
-## Setup
-1. Create a Supabase project at https://supabase.com/.
-2. Run `supabase/schema.sql` in the Supabase SQL Editor.
-3. Put the Supabase Project URL and publishable/anon key into `config.js`. Never use a service-role or secret key in browser code.
-4. Sign up through the website, then follow the admin promotion SQL comment at the end of `supabase/schema.sql`.
-5. In GitHub, open Settings → Pages, select Deploy from a branch, choose `main` and `/(root)`, then save.
-6. Add the GitHub Pages URL to Supabase Auth's allowed redirect URLs.
-
-If `config.js` is not configured, the website runs in demo mode; auth, comments, and admin writes are disabled.
+## Publish with GitHub Pages
+1. Open Settings → Pages in this repository.
+2. Choose **Deploy from a branch**.
+3. Select branch `main` and folder `/(root)`, then save.
+4. Wait for GitHub Pages to publish the site.
 
 ## Files
 - `index.html`: page structure
-- `styles.css`: responsive styling
-- `app.js`: search, auth, comments, and admin UI
-- `config.js`: public Supabase configuration
-- `supabase/schema.sql`: schema and row-level security policies
+- `styles.css`: responsive design
+- `app.js`: public people and policy data, search, and filters
 
-Before public launch, test RLS thoroughly and consider email verification, CAPTCHA/rate limiting, and a privacy notice.
+## Accuracy note
+Names, roles, and policy summaries are for navigation and general information. Roles and policy details can change. Follow the linked official sources for the latest information. This website is not endorsed by or affiliated with the party.
