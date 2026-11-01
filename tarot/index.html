@@ -90,7 +90,7 @@ const suits=[
 ];
 const ranks=[['Ace','หนึ่ง','จุดเริ่มต้นและโอกาสใหม่'],['Two','สอง','การเลือกและการสร้างสมดุล'],['Three','สาม','การร่วมมือและการเติบโต'],['Four','สี่','การวางรากฐานและความมั่นคง'],['Five','ห้า','การปรับตัวเมื่อพบความท้าทาย'],['Six','หก','การแบ่งปันและความก้าวหน้า'],['Seven','เจ็ด','ความอดทนและการประเมินทางเลือก'],['Eight','แปด','การพัฒนาและความต่อเนื่อง'],['Nine','เก้า','ความชำนาญและผลจากความพยายาม'],['Ten','สิบ','บทสรุปและความรับผิดชอบ'],['Page','เด็กถือ','ความอยากรู้อยากเห็นและการเรียนรู้'],['Knight','อัศวิน','การเดินหน้าและความกล้า'],['Queen','ราชินี','ความเข้าใจและการดูแล'],['King','ราชา','ความเป็นผู้นำและความรับผิดชอบ']];
 const cards=[];
-major.forEach((m,i)=>cards.push({name:m[0],roman:m[1],thai:m[2],meaning:m[3],type:'major',group:'Major Arcana',file:'RWS1909 - '+m[0].replace(/^The /,'')+'.jpeg'}));
+major.forEach((m,i)=>cards.push({name:m[0],roman:m[1],thai:m[2],meaning:m[3],type:'major',group:'Major Arcana',file:'RWS1909 - '+String(i).padStart(2,'0')+' '+m[0].replace(/^The /,'')+'.jpeg'}));
 suits.forEach(s=>ranks.forEach((r,i)=>cards.push({name:r[0]+' of '+s.key,roman:r[1],thai:s.th+' · '+r[1],meaning:r[2]+' ในเรื่อง'+s.theme+' ไพ่ใบนี้ชวนให้ค่อย ๆ พิจารณาสถานการณ์และเลือกก้าวต่อไปอย่างรอบคอบ',type:'minor',group:s.key,file:'RWS1909 - '+s.key+' '+String(i+1).padStart(2,'0')+'.jpeg'})));
 const imageBase='https://commons.wikimedia.org/wiki/Special:FilePath/';
 const topicAdvice={general:'มองภาพรวมอย่างใจเย็นและเลือกสิ่งที่สำคัญกับคุณ',love:'ให้ความสำคัญกับความจริงใจ การสื่อสาร และการเคารพขอบเขตของกันและกัน',money:'วางแผนรายรับรายจ่ายและตรวจสอบข้อมูลก่อนตัดสินใจเรื่องเงิน',study:'แบ่งเป้าหมายเป็นขั้นเล็ก ๆ ทบทวนสม่ำเสมอ และขอความช่วยเหลือเมื่อจำเป็น'};
