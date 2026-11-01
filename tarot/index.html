@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171126">
+<title>MOON TAROT | เปิดไพ่ทำนายดวง</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+:root{--bg:#171126;--panel:#211a35;--gold:#e9c979;--muted:#b8adc9;--line:#514269;--cream:#fff8e9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0,#38254d 0,transparent 48%),var(--bg);color:var(--cream);font-family:'IBM Plex Sans Thai',sans-serif;min-height:100vh}button,select{font:inherit}.wrap{width:min(100% - 32px,1050px);margin:auto}header{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid #ffffff18}.logo{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:3px;color:var(--gold)}.logo small{display:block;font:11px 'IBM Plex Sans Thai';letter-spacing:3px;color:var(--muted);text-align:center}nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}nav a:hover{color:var(--gold)}.hero{text-align:center;padding:64px 0 36px}.eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px}.hero h1{font:600 clamp(42px,8vw,70px)/1.05 'Cormorant Garamond',serif;margin:18px 0 10px;color:var(--gold)}.hero p{color:var(--muted);max-width:570px;margin:0 auto;line-height:1.9}.stars{color:var(--gold);letter-spacing:18px;margin:26px 0;font-size:20px}.panel{background:linear-gradient(145deg,#29203e,#1e1830);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,5vw,38px);box-shadow:0 24px 70px #0005;margin:20px auto 60px;max-width:850px}.panel h2{text-align:center;font-size:22px;margin:0 0 8px}.hint{text-align:center;color:var(--muted);font-size:13px;margin:0 0 24px}.choices{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:24px}.choice{border:1px solid var(--line);color:var(--muted);background:#171126;padding:10px 18px;border-radius:999px;cursor:pointer}.choice.active,.choice:hover{border-color:var(--gold);color:var(--gold);background:#e9c97912}.draw{text-align:center}.draw button,.again{border:0;border-radius:999px;background:linear-gradient(110deg,#e9c979,#b98c45);color:#21172c;font-weight:700;padding:13px 30px;cursor:pointer;box-shadow:0 8px 24px #d6ad5540}.draw button:hover,.again:hover{transform:translateY(-2px);filter:brightness(1.08)}.draw button:focus-visible,.choice:focus-visible{outline:3px solid white;outline-offset:3px}.cards{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px 0 8px}.tarot-card{width:clamp(112px,25vw,170px);min-height:240px;border-radius:14px;border:2px solid var(--gold);background:linear-gradient(150deg,#44345d,#20162f);padding:10px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;box-shadow:0 10px 25px #0006;animation:rise .5s both}.tarot-card .roman{font:16px 'Cormorant Garamond';color:var(--gold)}.tarot-card .symbol{font-size:64px;filter:drop-shadow(0 0 12px #e9c97966)}.tarot-card strong{font-size:13px;text-align:center;color:var(--cream)}.tarot-card small{font-size:10px;color:var(--gold);letter-spacing:1px}.reading{margin-top:28px;border-top:1px solid var(--line);padding-top:22px}.reading h3{color:var(--gold);margin:0 0 7px}.reading p{color:#e1d9eb;line-height:1.9;margin:0 0 18px}.reading .position{color:var(--gold);font-size:12px;letter-spacing:1px}.hidden{display:none!important}.disclaimer{text-align:center;color:#9286a5;font-size:11px;line-height:1.8;padding:0 0 30px}footer{text-align:center;color:#8e829e;border-top:1px solid #ffffff15;padding:20px;font-size:12px}@keyframes rise{from{opacity:0;transform:translateY(18px) rotateY(15deg)}to{opacity:1;transform:none}}@media(max-width:560px){nav a{margin-left:10px;font-size:12px}.hero{padding-top:48px}.tarot-card{min-height:205px}.tarot-card .symbol{font-size:52px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">☾ MOON TAROT <small>YOUR STORY · YOUR STARS</small></div><nav><a href="#reading">เริ่มทำนาย</a><a href="#about">เกี่ยวกับไพ่</a></nav></header>
+<section class="hero"><div class="eyebrow">✦ THE UNIVERSE HAS A MESSAGE ✦</div><h1>Discover Your Destiny</h1><p>ตั้งจิตให้สงบ นึกถึงเรื่องที่อยากค้นหาคำตอบ แล้วเลือกการเปิดไพ่ที่ต้องการ<br>ให้ไพ่เป็นกระจกสะท้อนความคิดและโอกาสของคุณ</p><div class="stars">✧ ☾ ✧</div></section>
+<main id="reading" class="panel"><h2>คุณอยากเปิดไพ่แบบไหน?</h2><p class="hint">เลือกหัวข้อก่อน แล้วกดปุ่มเพื่อเปิดไพ่</p>
+<div class="choices" id="topics"><button class="choice active" data-topic="general">ภาพรวมชีวิต</button><button class="choice" data-topic="love">ความรัก</button><button class="choice" data-topic="money">การเงิน</button><button class="choice" data-topic="study">การเรียน</button></div>
+<div class="choices" id="spreads"><button class="choice active" data-count="1">ไพ่ 1 ใบ · คำแนะนำ</button><button class="choice" data-count="3">ไพ่ 3 ใบ · อดีต ปัจจุบัน อนาคต</button></div>
+<div class="draw"><button id="drawBtn">✦ เปิดไพ่ทำนายดวง ✦</button></div><div id="result" aria-live="polite"></div>
+</main>
+<section id="about" class="disclaimer">ไพ่ยิปซีเป็นเครื่องมือเพื่อความบันเทิงและการสำรวจมุมมองของตนเอง<br>คำทำนายไม่ใช่ข้อเท็จจริงหรือการรับประกันอนาคต โปรดใช้วิจารณญาณในการตัดสินใจ</section>
+</div><footer>☾ MOON TAROT · ขอให้วันนี้เป็นวันที่ดีของคุณ ✧</footer>
+<script>
+const deck=[
+['The Fool','0','🧳','การเริ่มต้น','การเริ่มต้นใหม่กำลังรอคุณอยู่ ลองเปิดใจให้ประสบการณ์ที่ไม่คุ้นเคยและกล้าก้าวไปทีละขั้น'],
+['The Magician','I','🪄','พลัง创造สรรค์','คุณมีทักษะและทรัพยากรที่จำเป็นอยู่แล้ว ถึงเวลาลงมือทำและใช้ความสามารถให้เต็มที่'],
+['The High Priestess','II','🌙','สัญชาตญาณ','ลองหยุดฟังเสียงข้างในและสังเกตสิ่งที่ยังไม่ชัดเจน ไม่จำเป็นต้องรีบตัดสินใจ'],
+['The Empress','III','🌷','การเติบโต','ช่วงเวลาที่เหมาะกับการดูแลตัวเอง ความคิดสร้างสรรค์ และความสัมพันธ์ที่ทำให้รู้สึกมั่นคง'],
+['The Emperor','IV','👑','ความมั่นคง','การวางแผนและมีวินัยจะช่วยให้คุณจัดการเรื่องต่าง ๆ ได้ดีขึ้น ตั้งเป้าหมายให้ชัดเจน'],
+['The Hierophant','V','📜','การเรียนรู้','คำแนะนำจากครู ผู้มีประสบการณ์ หรือการเรียนรู้ตามขั้นตอนอาจช่วยเปิดมุมมองใหม่'],
+['The Lovers','VI','💞','ความสัมพันธ์','ความสัมพันธ์และการเลือกสิ่งที่ตรงกับคุณค่าของตัวเองเป็นประเด็นสำคัญ สื่อสารอย่างจริงใจ'],
+['The Chariot','VII','🏇','ความมุ่งมั่น','คุณกำลังเดินหน้าไปสู่เป้าหมาย จัดลำดับความสำคัญและรักษาสมดุลระหว่างความพยายามกับการพัก'],
+['Strength','VIII','🦁','ความกล้าหาญ','ความเข้มแข็งไม่จำเป็นต้องเสียงดัง ความใจเย็นและความเข้าใจจะช่วยให้ผ่านเรื่องท้าทาย'],
+['The Hermit','IX','🏮','การทบทวน','การให้เวลากับตัวเองอาจทำให้เห็นคำตอบชัดขึ้น ลองทบทวนสิ่งที่สำคัญก่อนเลือกทางต่อไป'],
+['Wheel of Fortune','X','☸️','การเปลี่ยนแปลง','สถานการณ์อาจกำลังเปลี่ยน ลองยืดหยุ่นและเตรียมพร้อมคว้าโอกาสที่เข้ามา'],
+['Justice','XI','⚖️','ความสมดุล','พิจารณาข้อมูลอย่างรอบด้านและยุติธรรม การตัดสินใจที่ดีควรคำนึงถึงผลที่จะตามมา'],
+['The Hanged Man','XII','🪢','มุมมองใหม่','การชะลอเพื่อมองปัญหาอีกด้านอาจมีประโยชน์ บางครั้งการเปลี่ยนวิธีคิดสำคัญกว่าการเร่งรีบ'],
+['Death','XIII','🦋','การเปลี่ยนผ่าน','การปิดบทหนึ่งอาจเปิดพื้นที่ให้สิ่งใหม่ ไม่ได้หมายถึงเหตุร้าย แต่ชวนให้ยอมรับการเปลี่ยนแปลง'],
+['Temperance','XIV','🏺','ความพอดี','ค่อย ๆ ปรับสิ่งต่าง ๆ ให้สมดุล ความสม่ำเสมอและความอดทนจะช่วยให้เกิดความคืบหน้า'],
+['The Devil','XV','⛓️','การตระหนักรู้','ลองสังเกตสิ่งที่กำลังดึงพลังหรือจำกัดอิสระของคุณ แล้วค่อย ๆ เลือกสิ่งที่เป็นประโยชน์กว่า'],
+['The Tower','XVI','⚡','การปรับโครงสร้าง','สิ่งที่ไม่มั่นคงอาจต้องได้รับการทบทวน ใช้โอกาสนี้เรียนรู้และสร้างพื้นฐานที่แข็งแรงขึ้น'],
+['The Star','XVII','⭐','ความหวัง','ยังมีโอกาสและแรงบันดาลใจรออยู่ ดูแลความหวังของตัวเองและค่อย ๆ ลงมือในสิ่งที่ทำได้'],
+['The Moon','XVIII','🌕','ความไม่ชัดเจน','อย่าเพิ่งด่วนสรุปเมื่อข้อมูลยังไม่ครบ ตรวจสอบข้อเท็จจริงและให้เวลากับความรู้สึก'],
+['The Sun','XIX','☀️','ความสดใส','พลังบวก ความชัดเจน และความสำเร็จเล็ก ๆ กำลังเป็นจุดเด่น แบ่งปันความสุขกับคนรอบตัว'],
+['Judgement','XX','📯','การตื่นรู้','ถึงเวลาทบทวนบทเรียนที่ผ่านมาและตัดสินใจว่าจะเดินหน้าด้วยแนวทางใด'],
+['The World','XXI','🌍','ความสำเร็จ','การเดินทางช่วงหนึ่งกำลังสมบูรณ์ มองเห็นความก้าวหน้าของตัวเองและเตรียมพร้อมสำหรับบทใหม่']
+];
+const topics={general:'ภาพรวมชีวิต',love:'ความรัก',money:'การเงิน',study:'การเรียน'};
+const extra={
+general:['ความสัมพันธ์รอบตัวอาจเติบโตได้ด้วยการสื่อสารและรับฟัง','จัดสรรทรัพยากรอย่างรอบคอบและมองหาโอกาสที่เหมาะกับตัวเอง','วางแผนทีละขั้นและให้เวลากับการเรียนรู้ จะช่วยให้เป้าหมายชัดขึ้น'],
+love:['ความจริงใจและการเคารพขอบเขตของกันและกันเป็นพื้นฐานที่ดี','ค่อย ๆ ทำความเข้าใจความรู้สึกและสื่อสารอย่างตรงไปตรงมา','เปิดโอกาสให้ความสัมพันธ์เติบโตตามจังหวะ ไม่ต้องเร่งรีบ'],
+money:['วางแผนรายรับรายจ่ายและคิดให้รอบคอบก่อนใช้จ่าย','ตรวจสอบข้อมูลก่อนตัดสินใจเรื่องเงิน และหลีกเลี่ยงความเสี่ยงที่ไม่เข้าใจ','เป้าหมายการออมเล็ก ๆ ที่ทำสม่ำเสมอช่วยสร้างความมั่นคงได้'],
+study:['แบ่งงานเป็นส่วนเล็ก ๆ และทบทวนบทเรียนอย่างสม่ำเสมอ','ลองเปลี่ยนวิธีอ่านหรือขอคำแนะนำเมื่อเจอเรื่องที่ยังไม่เข้าใจ','ความพยายามต่อเนื่องและการพักให้เพียงพอช่วยให้เรียนรู้ได้ดีขึ้น']
+};
+let topic='general',count=1;
+document.querySelectorAll('#topics button').forEach(b=>b.addEventListener('click',()=>{topic=b.dataset.topic;document.querySelectorAll('#topics button').forEach(x=>x.classList.toggle('active',x===b))}));
+document.querySelectorAll('#spreads button').forEach(b=>b.addEventListener('click',()=>{count=Number(b.dataset.count);document.querySelectorAll('#spreads button').forEach(x=>x.classList.toggle('active',x===b))}));
+document.getElementById('drawBtn').addEventListener('click',()=>{
+ const chosen=[...deck].sort(()=>Math.random()-.5).slice(0,count);
+ const positions=count===1?['คำแนะนำจากไพ่']:['อดีต','ปัจจุบัน','อนาคต'];
+ const result=document.getElementById('result');
+ result.innerHTML='<div class="cards">'+chosen.map(c=>'<article class="tarot-card"><span class="roman">'+c[1]+'</span><span class="symbol">'+c[2]+'</span><strong>'+c[0]+'</strong><small>'+c[3]+'</small></article>').join('')+'</div><div class="reading">'+chosen.map((c,i)=>'<div><div class="position">'+positions[i]+'</div><h3>'+c[0]+' — '+c[3]+'</h3><p>'+c[4]+' '+extra[topic][i]+'</p></div>').join('')+'</div>';
+ result.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+</script>
+</body></html>
