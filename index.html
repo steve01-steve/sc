@@ -28,7 +28,6 @@
     </nav>
     <div class="header-actions">
       <button id="languageToggle" class="language-toggle" aria-label="Switch language">EN</button>
-      <a href="admin.html" class="admin-link" data-i18n="adminLink">ผู้ดูแล <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -102,14 +101,7 @@
     <section id="contact" class="contact-section">
       <div class="section-wrap contact-layout">
         <div class="contact-copy"><div class="section-kicker"><span>06 / GET IN TOUCH</span><span data-i18n="contactKicker">ร่วมส่งเสียง</span></div><h2 data-i18n="contactTitle">มีไอเดียหรือ<br>อยากบอกอะไรกับเรา<span class="blue-text">ไหม?</span></h2><p data-i18n="contactText">ทุกความคิดเห็นช่วยให้เราเข้าใจสิ่งที่นักเรียนต้องการมากขึ้น ส่งข้อเสนอแนะหรือคำถามถึงทีมสภานักเรียนได้ที่นี่</p><div class="contact-aside"><span class="contact-aside-icon">↗</span><span data-i18n="contactAside">ข้อความของคุณจะถูกส่งถึงทีมสภานักเรียน</span></div></div>
-        <form id="contactForm" class="contact-form">
-          <label><span data-i18n="formName">ชื่อที่ต้องการให้เราเรียก</span><input name="name" autocomplete="name" maxlength="100" required placeholder="ชื่อเล่น / Name"></label>
-          <label><span data-i18n="formEmail">อีเมล (ถ้าต้องการให้ติดต่อกลับ)</span><input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com"></label>
-          <label><span data-i18n="formTopic">หัวข้อ</span><select name="topic" required><option value="" data-i18n="selectTopic">เลือกหัวข้อ</option><option value="suggestion" data-i18n="topicSuggestion">ข้อเสนอแนะ</option><option value="question" data-i18n="topicQuestion">สอบถาม</option><option value="project" data-i18n="topicProject">เสนอไอเดียโครงการ</option></select></label>
-          <label><span data-i18n="formMessage">ข้อความ</span><textarea name="message" rows="4" maxlength="3000" required placeholder="เขียนข้อความของคุณที่นี่..."></textarea></label>
-          <div class="form-actions"><button type="submit" class="button button-primary"><span data-i18n="sendMessage">ส่งข้อความ</span><span aria-hidden="true">↗</span></button><p id="contactStatus" role="status" aria-live="polite"></p></div>
-          <p class="privacy-note" data-i18n="privacyNote">ใช้ข้อมูลเท่าที่จำเป็นเพื่ออ่านข้อความและติดต่อกลับตามที่คุณร้องขอ</p>
-        </form>
+        <div class="contact-card"><span class="contact-card-mark">SC</span><div class="contact-card-copy"><span class="contact-card-label" data-i18n="contactCardLabel">OPEN CHANNEL · COMING SOON</span><h3 data-i18n="contactCardTitle">พื้นที่รับฟังความคิดเห็น</h3><p data-i18n="contactCardText">ช่องทางติดต่อของสภานักเรียนจะประกาศที่นี่เมื่อพร้อมให้บริการ</p></div><div class="contact-card-bottom"><span data-i18n="contactCardBottom">VOICE · IDEAS · ACTION</span><span>↗</span></div></div>
       </div>
     </section>
   </main>
@@ -122,8 +114,6 @@
 
   <dialog id="projectDialog" class="content-dialog" aria-labelledby="projectDialogTitle"><form method="dialog" class="content-dialog-close"><button aria-label="ปิด">×</button></form><div id="projectDetail" class="content-dialog-body"></div></dialog>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase-config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
