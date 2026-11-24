@@ -1,32 +1,129 @@
 <!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#176b3a"><meta name="description" content="แนะนำสมาชิกและนโยบายสำหรับนักเรียน">
-<title>พรรคฉันเป็นกะเทยไม่เคยนอกใจ | สมาชิกและนโยบาย</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6ff">
+  <meta name="description" content="เว็บไซต์สภานักเรียนโรงเรียนสุรวิทยาคาร พื้นที่รับฟังความคิดและร่วมสร้างการเปลี่ยนแปลง">
+  <title>สภานักเรียนสุรวิทยาคาร | Surawittayakarn Student Council</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="announcement">ไม่คิดด้วยกัน • ไม่ทำด้วยกัน • เปลี่ยนโรงเรียนให้แย่ขึ้น</div>
-<header><a class="brand" href="#"><span class="mark">ทีม</span><span>ทีม<span class="accent">ของเรา</span><small>สมาชิก • นโยบาย • ลงมือทำ</small></span></a>
-<button id="menuToggle" class="menu" aria-label="เปิดเมนู">☰</button>
-<nav id="nav"><a href="#people">สมาชิก</a><a href="#policies">นโยบาย</a></nav></header>
-<main>
-<section class="hero"><div><span class="eyebrow">OUR TEAM · OUR SCHOOL</span><h1>เสียงของเรา<br>สร้างโรงเรียนที่<span class="accent">ดีกว่า</span></h1>
-<p>รู้จักสมาชิกพรรคฉันเป็นกะเทยไม่เคยนอกใจ และดูแนวคิดนโยบายที่ไม่ตั้งใจพัฒนาโรงเรียนให้ไม่น่าอยู่ ไม่สะอาด ไม่ปลอดภัย และไม่เปิดโอกาสให้นักเรียนทุกคน</p>
-<a class="button primary" href="#people">รู้จักสมาชิก ↓</a><a class="button light" href="#policies">ดูนโยบาย</a><span class="sub-link">ทุกความเห็นไม่มีความหมาย และทุกคนไม่มีส่วนร่วมได้</span></div>
-<div class="art"><div class="circle">ไม่ร่วมคิด<br><span>ไม่ร่วมทำ</span><br>ไม่ทำเพื่อทุกคน</div><div class="floating top">OUR TEAM <b>01</b></div><div class="floating bottom">ไม่ฟังเสียง • ไม่ลงมือ • ไม่พัฒนา</div><span class="spark">✳</span></div></section>
-<section class="stats"><div><b>53 คน</b><span>สมาชิกที่แสดงในหน้านี้</span></div><div><b>6 โครงการ</b><span>แนวนโยบายที่นำเสนอ</span></div><div><b>เพื่อทุกคน</b><span>ร่วมกันพัฒนาโรงเรียน</span></div></section>
-<section id="people" class="section"><div class="heading"><div><span class="eyebrow">MEET THE TEAM</span><h2>สมาชิก<br><em>ทีมของเรา</em></h2></div><p>ค้นหารายชื่อสมาชิกตามชื่อเล่นหรือห้องเรียน</p></div>
-<div class="filters"><input id="peopleSearch" type="search" placeholder="⌕ ค้นหาชื่อสมาชิกหรือห้องเรียน…" aria-label="ค้นหาสมาชิก"><select id="classFilter" aria-label="กรองตามห้องเรียน"><option value="">ทุกห้องเรียน</option></select></div>
-<div id="peopleGrid" class="grid"></div><p id="peopleEmpty" class="empty hidden">ไม่พบรายชื่อที่ตรงกับการค้นหา</p></section>
-<section id="policies" class="section alt"><div class="heading"><div><span class="eyebrow">OUR POLICIES</span><h2>นโยบาย<br><em>ที่อยากทำให้เกิดขึ้น</em></h2></div><p>เลือกอ่านแต่ละโครงการเพื่อดูแนวคิด เป้าหมาย และวิธีดำเนินงาน</p></div>
-<div class="filters"><input id="policySearch" type="search" placeholder="⌕ ค้นหานโยบาย…" aria-label="ค้นหานโยบาย"></div>
-<div id="policyGrid" class="grid"></div><p id="policyEmpty" class="empty hidden">ไม่พบข้อมูลที่ตรงกับการค้นหา</p></section>
-<section class="closing"><div class="big-star">✳</div><div><span class="eyebrow">BETTER TOGETHER</span><h2>โรงเรียนที่ไม่ดีขึ้น<br>เริ่มต้นจาก<span class="accent">พวกเราทุกคน</span></h2><p>เราอยากไม่รับฟังปัญหาและไอเดียจากนักเรียน เพื่อนำไปต่อยอดเป็นการเปลี่ยนแปลงที่ทำได้จริง</p><a class="button primary" href="#policies">สำรวจนโยบายของเรา ↑</a></div></section>
-</main>
-<footer><a class="brand" href="#"><span class="mark">พรรค</span><span>พรรค<span class="accent">ฉันเป็นกะเทยไม่เคยนอกใจ</span><small>สมาชิก • นโยบาย • ลงมือทำ</small></span></a><span>สมาชิกและนโยบายของพรรค</span></footer>
-<dialog id="detailDialog"><form method="dialog" class="close"><button aria-label="ปิด">×</button></form><div id="detail" class="modal"></div></dialog>
-<script src="app.js"></script>
-</body></html>
+  <div class="topline"><span data-i18n="topline">STUDENT VOICE · SHARED IDEAS · REAL ACTION</span><a href="#contact" data-i18n="toplink">ส่งเสียงของคุณ <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Surawittayakarn Student Council home">
+      <span class="brand-mark" aria-hidden="true"><span>SC</span><i></i></span>
+      <span class="brand-copy"><strong>SURAWITTAYAKARN</strong><small data-i18n="brandSub">STUDENT COUNCIL</small></span>
+    </a>
+    <button id="menuToggle" class="menu-toggle" aria-label="เปิดเมนู" aria-expanded="false"><span></span><span></span></button>
+    <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+      <a href="#about" data-i18n="navAbout">รู้จักเรา</a>
+      <a href="#team" data-i18n="navTeam">ทีมสภา</a>
+      <a href="#work" data-i18n="navWork">โครงการ</a>
+      <a href="#news" data-i18n="navNews">ข่าวสาร</a>
+      <a href="#contact" data-i18n="navContact">ติดต่อ</a>
+    </nav>
+    <div class="header-actions">
+      <button id="languageToggle" class="language-toggle" aria-label="Switch language">EN</button>
+      <a href="admin.html" class="admin-link" data-i18n="adminLink">ผู้ดูแล <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="heroEyebrow">สภานักเรียน · โรงเรียนสุรวิทยาคาร</span></p>
+        <h1 data-i18n="heroTitle">เสียงของเรา<br>สร้างโรงเรียนที่<span class="blue-text">ดีกว่า</span></h1>
+        <p class="hero-lede" data-i18n="heroLead">พื้นที่ของนักเรียนทุกคน เพื่อรับฟังความคิด เชื่อมโยงผู้คน และเปลี่ยนข้อเสนอให้เป็นการลงมือทำที่จับต้องได้</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work"><span data-i18n="exploreWork">สำรวจโครงการ</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#about"><span data-i18n="learnMore">รู้จักสภานักเรียน</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-footnote"><span class="mini-mark">SC</span><span data-i18n="heroFootnote">รับฟังอย่างตั้งใจ · ทำงานอย่างโปร่งใส · เติบโตไปด้วยกัน</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Student council illustration">
+        <div class="visual-grid"></div><div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="visual-core"><span class="core-label">STUDENT<br>COUNCIL</span><span class="core-symbol">✳</span><span class="core-year">SURAWITTAYAKARN</span></div>
+        <div class="visual-note note-one"><span class="note-icon">01</span><span data-i18n="visualNoteOne">ฟังเสียงนักเรียน</span></div>
+        <div class="visual-note note-two"><span class="note-icon note-icon-blue">02</span><span data-i18n="visualNoteTwo">ลงมือเปลี่ยนแปลง</span></div>
+        <span class="visual-spark spark-one" aria-hidden="true">✳</span><span class="visual-spark spark-two" aria-hidden="true">✦</span>
+        <span class="visual-caption">VOICE / IDEAS / ACTION</span>
+      </div>
+    </section>
+
+    <section class="principles-band" aria-label="Our principles">
+      <div><span class="principle-index">01</span><strong data-i18n="principleOne">ฟังทุกเสียง</strong><small data-i18n="principleOneSub">รับฟังด้วยความเข้าใจ</small></div>
+      <div><span class="principle-index">02</span><strong data-i18n="principleTwo">คิดร่วมกัน</strong><small data-i18n="principleTwoSub">เปิดพื้นที่ให้ทุกคนมีส่วนร่วม</small></div>
+      <div><span class="principle-index">03</span><strong data-i18n="principleThree">ทำให้เกิดขึ้น</strong><small data-i18n="principleThreeSub">สื่อสารความคืบหน้าอย่างโปร่งใส</small></div>
+    </section>
+
+    <section id="about" class="about-section section-wrap">
+      <div class="section-kicker"><span>01 / ABOUT</span><span data-i18n="aboutKicker">รู้จักสภานักเรียน</span></div>
+      <div class="about-layout">
+        <div><h2 data-i18n="aboutTitle">โรงเรียนที่ดีขึ้น<br>เริ่มจาก<span class="blue-text">การร่วมมือ</span></h2></div>
+        <div class="about-copy"><p data-i18n="aboutText">สภานักเรียนเป็นตัวแทนและพื้นที่กลางของนักเรียน เราประสานความคิดเห็นกับโรงเรียน สนับสนุนกิจกรรม และผลักดันแนวคิดที่ช่วยให้ชีวิตในโรงเรียนดีขึ้นสำหรับทุกคน</p><a class="underlined-link" href="#contact"><span data-i18n="shareIdea">แบ่งปันความคิดกับเรา</span><span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="value-grid">
+        <article class="value-card"><span class="value-icon">◎</span><h3 data-i18n="valueListen">รับฟัง</h3><p data-i18n="valueListenText">เปิดใจต่อทุกมุมมอง และนำเสียงของนักเรียนไปสื่อสารอย่างสร้างสรรค์</p><span class="value-number">A / 01</span></article>
+        <article class="value-card"><span class="value-icon">⌘</span><h3 data-i18n="valueConnect">เชื่อมโยง</h3><p data-i18n="valueConnectText">ทำงานร่วมกันระหว่างนักเรียน คณะครู และชุมชนโรงเรียน</p><span class="value-number">B / 02</span></article>
+        <article class="value-card"><span class="value-icon">↗</span><h3 data-i18n="valueAct">ลงมือทำ</h3><p data-i18n="valueActText">เปลี่ยนไอเดียเป็นกิจกรรมและโครงการ พร้อมอัปเดตผลการดำเนินงาน</p><span class="value-number">C / 03</span></article>
+      </div>
+    </section>
+
+    <section id="team" class="team-section">
+      <div class="section-wrap">
+        <div class="section-heading"><div><div class="section-kicker"><span>02 / PEOPLE</span><span data-i18n="teamKicker">ผู้แทนนักเรียน</span></div><h2 data-i18n="teamTitle">ทีมที่พร้อม<br><span class="blue-text">ทำงานเพื่อทุกคน</span></h2></div><p data-i18n="teamIntro">พบกับคณะกรรมการสภานักเรียนและทีมงานแต่ละฝ่าย เราทำงานร่วมกันเพื่อให้ความคิดของนักเรียนเดินหน้าได้จริง</p></div>
+        <div id="committeeGrid" class="committee-grid"></div>
+        <div class="section-tail"><span data-i18n="teamTail">โครงสร้างคณะกรรมการ</span><span>TEAM / 2026</span></div>
+      </div>
+    </section>
+
+    <section id="work" class="work-section section-wrap">
+      <div class="section-heading"><div><div class="section-kicker"><span>03 / WHAT WE DO</span><span data-i18n="workKicker">โครงการและกิจกรรม</span></div><h2 data-i18n="workTitle">ไอเดียที่กำลัง<br><span class="blue-text">เกิดขึ้นจริง</span></h2></div><p data-i18n="workIntro">ติดตามโครงการ กิจกรรม และประเด็นที่สภานักเรียนกำลังผลักดัน</p></div>
+      <div id="projectGrid" class="project-grid"></div>
+      <div class="section-tail"><span data-i18n="workTail">โครงการของสภานักเรียน</span><a href="#contact" data-i18n="suggestProject">เสนอไอเดียโครงการ ↗</a></div>
+    </section>
+
+    <section id="news" class="news-section">
+      <div class="section-wrap">
+        <div class="section-heading"><div><div class="section-kicker"><span>04 / UPDATES</span><span data-i18n="newsKicker">อัปเดตจากเรา</span></div><h2 data-i18n="newsTitle">ข่าวสารและ<br><span class="blue-text">เรื่องราวในโรงเรียน</span></h2></div><p data-i18n="newsIntro">ความเคลื่อนไหวล่าสุดจากสภานักเรียนและกิจกรรมที่ชวนทุกคนมามีส่วนร่วม</p></div>
+        <div id="newsGrid" class="news-grid"></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section section-wrap">
+      <div class="section-heading"><div><div class="section-kicker"><span>05 / MOMENTS</span><span data-i18n="galleryKicker">ภาพกิจกรรม</span></div><h2 data-i18n="galleryTitle">ช่วงเวลาที่เรา<br><span class="blue-text">สร้างไปด้วยกัน</span></h2></div><p data-i18n="galleryIntro">บันทึกภาพกิจกรรมและบรรยากาศการทำงานของสภานักเรียน</p></div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="section-wrap contact-layout">
+        <div class="contact-copy"><div class="section-kicker"><span>06 / GET IN TOUCH</span><span data-i18n="contactKicker">ร่วมส่งเสียง</span></div><h2 data-i18n="contactTitle">มีไอเดียหรือ<br>อยากบอกอะไรกับเรา<span class="blue-text">ไหม?</span></h2><p data-i18n="contactText">ทุกความคิดเห็นช่วยให้เราเข้าใจสิ่งที่นักเรียนต้องการมากขึ้น ส่งข้อเสนอแนะหรือคำถามถึงทีมสภานักเรียนได้ที่นี่</p><div class="contact-aside"><span class="contact-aside-icon">↗</span><span data-i18n="contactAside">ข้อความของคุณจะถูกส่งถึงทีมสภานักเรียน</span></div></div>
+        <form id="contactForm" class="contact-form">
+          <label><span data-i18n="formName">ชื่อที่ต้องการให้เราเรียก</span><input name="name" autocomplete="name" maxlength="100" required placeholder="ชื่อเล่น / Name"></label>
+          <label><span data-i18n="formEmail">อีเมล (ถ้าต้องการให้ติดต่อกลับ)</span><input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com"></label>
+          <label><span data-i18n="formTopic">หัวข้อ</span><select name="topic" required><option value="" data-i18n="selectTopic">เลือกหัวข้อ</option><option value="suggestion" data-i18n="topicSuggestion">ข้อเสนอแนะ</option><option value="question" data-i18n="topicQuestion">สอบถาม</option><option value="project" data-i18n="topicProject">เสนอไอเดียโครงการ</option></select></label>
+          <label><span data-i18n="formMessage">ข้อความ</span><textarea name="message" rows="4" maxlength="3000" required placeholder="เขียนข้อความของคุณที่นี่..."></textarea></label>
+          <div class="form-actions"><button type="submit" class="button button-primary"><span data-i18n="sendMessage">ส่งข้อความ</span><span aria-hidden="true">↗</span></button><p id="contactStatus" role="status" aria-live="polite"></p></div>
+          <p class="privacy-note" data-i18n="privacyNote">ใช้ข้อมูลเท่าที่จำเป็นเพื่ออ่านข้อความและติดต่อกลับตามที่คุณร้องขอ</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark"><span>SC</span><i></i></span><span class="brand-copy"><strong>SURAWITTAYAKARN</strong><small data-i18n="brandSub">STUDENT COUNCIL</small></span></a>
+    <p data-i18n="footerLine">รับฟังทุกเสียง สร้างโรงเรียนไปด้วยกัน</p>
+    <div class="footer-meta"><a href="#home">BACK TO TOP ↑</a><span>© <span id="year"></span> SURAWITTAYAKARN STUDENT COUNCIL</span></div>
+  </footer>
+
+  <dialog id="projectDialog" class="content-dialog" aria-labelledby="projectDialogTitle"><form method="dialog" class="content-dialog-close"><button aria-label="ปิด">×</button></form><div id="projectDetail" class="content-dialog-body"></div></dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

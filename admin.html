@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6ff">
+  <title>ระบบผู้ดูแล | Surawittayakarn Student Council</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <div class="admin-topbar"><a class="brand" href="index.html"><span class="brand-mark"><span>SC</span><i></i></span><span class="brand-copy"><strong>SURAWITTAYAKARN</strong><small>STUDENT COUNCIL</small></span></a><a class="back-link" href="index.html">← กลับหน้าเว็บไซต์</a></div>
+  <main class="admin-shell">
+    <section id="setupNotice" class="setup-notice hidden" role="status">
+      <span class="setup-symbol">i</span><div><strong>ตั้งค่า Supabase ก่อนเริ่มใช้งาน</strong><p>เพิ่ม Project URL และ anon/publishable key ในไฟล์ <code>supabase-config.js</code> จากนั้นรันสคริปต์ <code>supabase-schema.sql</code> ใน SQL Editor ของโปรเจกต์ Supabase</p></div>
+    </section>
+    <section id="loginView" class="login-card">
+      <div class="login-visual"><span class="login-orbit"></span><span class="login-center">SC</span><span class="login-caption">STUDENT COUNCIL · ADMIN</span></div>
+      <div class="login-content"><p class="admin-eyebrow">STAFF ACCESS / 01</p><h1>ระบบผู้ดูแล</h1><p class="login-intro">เข้าสู่ระบบเพื่อจัดการเนื้อหาของเว็บไซต์สภานักเรียน</p>
+        <form id="loginForm"><label>อีเมล<input name="email" type="email" autocomplete="username" required placeholder="admin@example.com"></label><label>รหัสผ่าน<input name="password" type="password" autocomplete="current-password" required placeholder="รหัสผ่าน"></label><button class="button button-primary" type="submit">เข้าสู่ระบบ <span>↗</span></button><p id="loginStatus" role="status" aria-live="polite"></p></form>
+        <p class="login-note">บัญชีผู้ดูแลสร้างและเชิญผ่าน Supabase Auth โดยผู้ดูแลระบบ</p>
+      </div>
+    </section>
+
+    <section id="dashboardView" class="dashboard hidden">
+      <div class="dashboard-heading"><div><p class="admin-eyebrow">CONTENT MANAGEMENT / 02</p><h1>จัดการเว็บไซต์</h1><p id="signedInAs" class="signed-in"></p></div><button id="signOutButton" class="signout-button">ออกจากระบบ</button></div>
+      <div class="role-banner"><span class="role-dot"></span><span>บทบาทของคุณ: <strong id="currentRole"></strong></span><span class="role-note">ข้อมูลที่บันทึกจะอัปเดตบนหน้าเว็บไซต์ตามสถานะเผยแพร่</span></div>
+      <div class="dashboard-layout">
+        <aside class="dashboard-nav" id="dashboardNav" aria-label="เมนูจัดการ">
+          <button class="active" data-view="projects">โครงการ</button><button data-view="members">คณะกรรมการ</button><button data-view="committees">ฝ่ายงาน</button><button data-view="news">ข่าวสาร</button><button data-view="gallery">แกลเลอรี</button><button data-view="messages">ข้อความติดต่อ</button><button data-view="users" class="super-admin-only hidden">บัญชีผู้ดูแล</button>
+        </aside>
+        <section class="content-panel">
+          <div class="content-heading"><div><p id="contentEyebrow" class="admin-eyebrow">PUBLISHED CONTENT</p><h2 id="contentTitle">โครงการ</h2></div><button id="createButton" class="button button-primary">เพิ่มรายการ <span>＋</span></button></div>
+          <div id="contentStatus" class="content-status" role="status" aria-live="polite"></div>
+          <div id="contentList" class="content-list"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <dialog id="editorDialog" class="editor-dialog"><form id="editorForm"><div class="dialog-heading"><div><p class="admin-eyebrow">CONTENT EDITOR</p><h2 id="editorTitle">เพิ่มรายการ</h2></div><button id="editorClose" type="button" class="dialog-close" aria-label="ปิด">×</button></div><div id="editorFields" class="editor-fields"></div><div class="dialog-actions"><button type="button" id="cancelEdit" class="button button-secondary">ยกเลิก</button><button type="submit" class="button button-primary">บันทึก <span>↗</span></button></div><p id="editorStatus" role="status"></p></form></dialog>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
